@@ -1,0 +1,41 @@
+---
+title: "Hello World — Why I Started This Blog"
+description: "An introduction to who I am and what I'll be writing about."
+date: 2026-03-14
+categories: [general]
+image: cover.png
+---
+
+After years of scribbling notes into private notebooks and Jupyter cells, I decided it was
+time to write in public.
+
+## Who I am
+
+I'm a financial engineer at PSP Investments in Montreal. My day-to-day involves quantitative
+modelling in credit risk and derivatives — building tools that help understand complex financial
+exposures across a large institutional portfolio.
+
+Outside the office, I've been steadily building skills in machine learning and modern data
+science, completing certifications in deep learning, TensorFlow, and Python data science.
+I've also started experimenting with Julia, which I'm genuinely excited about for
+numerical computing.
+
+## What I'll write about
+
+A mix of things:
+
+- **Quantitative finance** — yield curves, derivatives pricing, counterparty credit risk
+- **QuantLib** — practical guides to using QuantLib in Python
+- **Machine learning in finance** — applying ML to financial problems
+- **Julia** — numerical computing experiments
+- **Tools and workflow** — how I set up and run my development environment
+
+Some posts will be regular markdown. Others will be Jupyter notebooks rendered directly —
+so you'll see live code output alongside the writing.
+
+## Why public?
+
+Writing forces clarity. And if even one post saves someone three hours of debugging a
+QuantLib discount curve, it's worth the effort.
+
+More soon.

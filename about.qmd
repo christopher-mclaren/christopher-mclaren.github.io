@@ -1,0 +1,56 @@
+---
+title: "About"
+toc: false
+---
+
+## Christopher McLaren
+
+I'm a bilingual financial engineer based in Montreal, Quebec, currently at **PSP Investments**,
+one of Canada's largest Crown corporation pension investment managers.
+
+My work sits at the intersection of quantitative finance, counterparty credit risk, and
+derivatives — building models and tools that help understand and manage complex financial exposures.
+
+Over the past several years I've developed a strong interest in applying machine learning
+and data science to financial problems, which led me to earn several ML certifications
+and experiment with tools like Python, Julia, and QuantLib.
+
+This site is where I share what I'm learning and building.
+
+---
+
+## Credentials
+
+| Credential | Institution |
+|:--|:--|
+| MBA | McGill University |
+| MSc | |
+| CFA — Chartered Financial Analyst | CFA Institute |
+| CAIA — Chartered Alternative Investment Analyst | CAIA Association |
+| FRM — Financial Risk Manager | GARP |
+
+---
+
+## Technical Skills
+
+**Languages:** Python · Julia · SQL
+
+**Quant libraries:** QuantLib · NumPy · SciPy · Pandas · Polars · statsmodels · cvxpy
+
+**Machine Learning:** scikit-learn · TensorFlow · PyTorch · Neural Networks · Gradient Boosting
+
+**Certifications:** Neural Networks and Deep Learning (Coursera) · Machine Learning with
+TensorFlow (Coursera) · Data Scientist with Python (DataCamp)
+
+---
+
+## Languages
+
+Fluent in **English** and **French**.
+
+---
+
+## Contact
+
+- GitHub: [christopher-mclaren](https://github.com/christopher-mclaren)
+- LinkedIn: [christopher-mclaren](https://www.linkedin.com/in/christopher-mclaren/)

@@ -1,0 +1,75 @@
+---
+title: "Getting Started with QuantLib in Python"
+description: "A hands-on introduction to QuantLib — setting up your environment, building a discount curve, and pricing a vanilla swap."
+date: 2026-03-14
+categories: [quantlib, python, rates]
+image: cover.png
+---
+
+[QuantLib](https://www.quantlib.org/) is the most comprehensive open-source library for
+quantitative finance. It handles everything from date arithmetic to full term structure
+models and derivatives pricing. This post walks through the basics.
+
+## Setup
+
+If you're using the `fineng` conda environment:
+
+```bash
+conda install -c conda-forge quantlib-python
+```
+
+Then import:
+
+```python
+import QuantLib as ql
+print(ql.__version__)
+```
+
+## Setting the evaluation date
+
+QuantLib has a global evaluation date that anchors all calculations:
+
+```python
+today = ql.Date(14, 3, 2026)
+ql.Settings.instance().evaluationDate = today
+print(f"Evaluation date: {today}")
+```
+
+## Building a discount curve
+
+A discount curve maps each future date to a discount factor $P(0, T)$, which represents
+the present value of 1 unit of currency received at time $T$.
+
+$$P(0, T) = e^{-r(T) \cdot T}$$
+
+```python
+dates = [
+    today,
+    today + ql.Period(6, ql.Months),
+    today + ql.Period(1, ql.Years),
+    today + ql.Period(2, ql.Years),
+    today + ql.Period(5, ql.Years),
+    today + ql.Period(10, ql.Years),
+]
+
+discounts = [1.0, 0.978, 0.955, 0.910, 0.820, 0.680]
+
+curve = ql.DiscountCurve(dates, discounts, ql.Actual360())
+curve.enableExtrapolation()
+
+# Query the curve
+print(f"1Y discount  : {curve.discount(today + ql.Period(1, ql.Years)):.4f}")
+print(f"5Y discount  : {curve.discount(today + ql.Period(5, ql.Years)):.4f}")
+print(f"10Y zero rate: {curve.zeroRate(10.0, ql.Continuous).rate():.4%}")
+```
+
+## What's next
+
+In the next post I'll use this curve to price a vanilla interest rate swap —
+computing the fixed rate that makes the NPV zero at inception.
+
+---
+
+::: {.callout-tip}
+The full notebook version of this post (with live output) will be added shortly.
+:::

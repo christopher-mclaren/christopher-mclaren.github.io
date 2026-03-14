@@ -1,0 +1,46 @@
+project:
+  type: website
+
+website:
+  title: "Christopher McLaren"
+  description: "Financial engineer at PSP Investments. Writing about quantitative finance, risk, and machine learning."
+  favicon: assets/favicon.png
+  open-graph: true
+  twitter-card: true
+
+  navbar:
+    left:
+      - text: "Blog"
+        href: blog/index.qmd
+      - text: "About"
+        href: about.qmd
+    right:
+      - icon: github
+        href: https://github.com/christopher-mclaren
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/christopher-mclaren/
+        aria-label: LinkedIn
+
+  page-footer:
+    left: "© Christopher McLaren"
+    right:
+      - icon: github
+        href: https://github.com/christopher-mclaren
+      - icon: linkedin
+        href: https://www.linkedin.com/in/christopher-mclaren/
+
+format:
+  html:
+    theme:
+      dark: darkly
+      light: flatly
+    css: styles.css
+    code-copy: true
+    code-overflow: wrap
+    highlight-style: github-dark
+    toc: true
+    toc-depth: 3
+
+execute:
+  freeze: auto

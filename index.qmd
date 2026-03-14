@@ -1,0 +1,34 @@
+---
+title: ""
+page-layout: full
+toc: false
+---
+
+::: {.hero}
+# Christopher McLaren
+
+::: {.credentials}
+MBA · MSc · CFA · CAIA · FRM
+:::
+
+::: {.tagline}
+Financial engineer at PSP Investments, Montreal. I write about quantitative finance,
+counterparty credit risk, derivatives pricing, and the intersection of machine learning
+with financial markets. Bilingual (EN/FR).
+:::
+
+[About me](about.qmd){.btn .btn-outline-secondary .btn-sm style="margin-top:1rem; margin-right:0.5rem;"}
+[GitHub](https://github.com/christopher-mclaren){.btn .btn-outline-secondary .btn-sm style="margin-top:1rem; margin-right:0.5rem;"}
+[LinkedIn](https://www.linkedin.com/in/christopher-mclaren/){.btn .btn-outline-secondary .btn-sm style="margin-top:1rem;"}
+:::
+
+## Writing
+
+| | |
+|:--|:--|
+| 2026-03-14 | [Getting Started with QuantLib in Python](blog/posts/quantlib-intro/index.qmd) |
+| 2026-03-14 | [Hello World — Why I Started This Blog](blog/posts/hello-world/index.qmd) |
+
+: {.blog-table}
+
+[All posts →](blog/index.qmd)
