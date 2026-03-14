@@ -3,3 +3,5 @@
 _freeze/
 *.ipynb_checkpoints
 .DS_Store
+
+**/*.quarto_ipynb

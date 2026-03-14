@@ -4,25 +4,32 @@ page-layout: full
 toc: false
 ---
 
-::: {.hero}
-# Christopher McLaren
+```{=html}
+<div class="site-banner-wrap">
+  <img src="assets/banner.jpg" class="site-banner" alt="Montreal skyline at night">
+</div>
 
-::: {.credentials}
-MBA · MSc · CFA · CAIA · FRM
-:::
-
-::: {.tagline}
-Senior Director Risk Analytics and Model Management at PSP Investments, Montreal. 
-I write about AI × Financial Engineering × Capital Markets 
-— where quantitative rigor meets strategic innovation, regulatory strategy, philosophical meanderings, and technical leadership.
-:::
-Bilingual (EN/FR).
-:::
-
-[About me](about.qmd){.btn .btn-outline-secondary .btn-sm style="margin-top:1rem; margin-right:0.5rem;"}
-[GitHub](https://github.com/christopher-mclaren){.btn .btn-outline-secondary .btn-sm style="margin-top:1rem; margin-right:0.5rem;"}
-[LinkedIn](https://www.linkedin.com/in/christopher-mclaren/){.btn .btn-outline-secondary .btn-sm style="margin-top:1rem;"}
-:::
+<div class="hero-flex">
+  <div class="hero-photo-wrap">
+    <img src="assets/LinkedinHeadshot.jpeg" class="headshot" alt="Christopher McLaren">
+  </div>
+  <div class="hero-bio">
+    <h1 class="hero-name">Christopher McLaren</h1>
+    <p class="credentials">MBA &nbsp;·&nbsp; MSc &nbsp;·&nbsp; CFA &nbsp;·&nbsp; CAIA &nbsp;·&nbsp; FRM</p>
+    <p class="tagline">
+      Senior Director Risk Analytics and Model Management at PSP Investments, Montreal.<br>
+      Writing about AI &times; Financial Engineering &times; Capital Markets &mdash;
+      where quantitative rigor meets strategic innovation, regulatory strategy,
+      philosophical meanderings, and technical leadership. Bilingual (EN/FR).
+    </p>
+    <div class="hero-links">
+      <a href="about.qmd" class="hero-btn">About</a>
+      <a href="https://github.com/christopher-mclaren" class="hero-btn">GitHub</a>
+      <a href="https://www.linkedin.com/in/christopher-mclaren/" class="hero-btn">LinkedIn</a>
+    </div>
+  </div>
+</div>
+```
 
 ## Writing
 
