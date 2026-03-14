@@ -10,48 +10,7 @@
 <atom:link href="https://christopher-mclaren.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Financial engineer at PSP Investments. Writing about quantitative finance, risk, and machine learning.</description>
 <generator>quarto-1.8.27</generator>
-<lastBuildDate>Sat, 14 Mar 2026 04:00:00 GMT</lastBuildDate>
-<item>
-  <title>Hello World — Why I Started This Blog</title>
-  <link>https://christopher-mclaren.github.io/blog/posts/hello-world/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>After years of scribbling notes into private notebooks and Jupyter cells, I decided it was time to write in public.</p>
-<section id="who-i-am" class="level2">
-<h2 class="anchored" data-anchor-id="who-i-am">Who I am</h2>
-<p>I’m a financial engineer at PSP Investments in Montreal. My day-to-day involves quantitative modelling in credit risk and derivatives — building tools that help understand complex financial exposures across a large institutional portfolio.</p>
-<p>Outside the office, I’ve been steadily building skills in machine learning and modern data science, completing certifications in deep learning, TensorFlow, and Python data science. I’ve also started experimenting with Julia, which I’m genuinely excited about for numerical computing.</p>
-</section>
-<section id="what-ill-write-about" class="level2">
-<h2 class="anchored" data-anchor-id="what-ill-write-about">What I’ll write about</h2>
-<p>A mix of things:</p>
-<ul>
-<li><strong>Quantitative finance</strong> — yield curves, derivatives pricing, counterparty credit risk</li>
-<li><strong>QuantLib</strong> — practical guides to using QuantLib in Python</li>
-<li><strong>Machine learning in finance</strong> — applying ML to financial problems</li>
-<li><strong>Julia</strong> — numerical computing experiments</li>
-<li><strong>Tools and workflow</strong> — how I set up and run my development environment</li>
-</ul>
-<p>Some posts will be regular markdown. Others will be Jupyter notebooks rendered directly — so you’ll see live code output alongside the writing.</p>
-</section>
-<section id="why-public" class="level2">
-<h2 class="anchored" data-anchor-id="why-public">Why public?</h2>
-<p>Writing forces clarity. And if even one post saves someone three hours of debugging a QuantLib discount curve, it’s worth the effort.</p>
-<p>More soon.</p>
-
-
-</section>
-
- ]]></description>
-  <category>general</category>
-  <guid>https://christopher-mclaren.github.io/blog/posts/hello-world/</guid>
-  <pubDate>Sat, 14 Mar 2026 04:00:00 GMT</pubDate>
-  <media:content url="https://christopher-mclaren.github.io/blog/posts/hello-world/cover.png" medium="image" type="image/png"/>
-</item>
+<lastBuildDate>Sat, 14 Mar 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Getting Started with QuantLib in Python</title>
   <link>https://christopher-mclaren.github.io/blog/posts/quantlib-intro/</link>
@@ -244,8 +203,49 @@ Tip
   <category>python</category>
   <category>rates</category>
   <guid>https://christopher-mclaren.github.io/blog/posts/quantlib-intro/</guid>
-  <pubDate>Sat, 14 Mar 2026 04:00:00 GMT</pubDate>
+  <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
   <media:content url="https://christopher-mclaren.github.io/blog/posts/quantlib-intro/cover.png" medium="image" type="image/png"/>
+</item>
+<item>
+  <title>Hello World — Why I Started This Blog</title>
+  <link>https://christopher-mclaren.github.io/blog/posts/hello-world/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>After years of scribbling notes into private notebooks and Jupyter cells, I decided it was time to write in public.</p>
+<section id="who-i-am" class="level2">
+<h2 class="anchored" data-anchor-id="who-i-am">Who I am</h2>
+<p>I’m a financial engineer at PSP Investments in Montreal. My day-to-day involves quantitative modelling in credit risk and derivatives — building tools that help understand complex financial exposures across a large institutional portfolio.</p>
+<p>Outside the office, I’ve been steadily building skills in machine learning and modern data science, completing certifications in deep learning, TensorFlow, and Python data science. I’ve also started experimenting with Julia, which I’m genuinely excited about for numerical computing.</p>
+</section>
+<section id="what-ill-write-about" class="level2">
+<h2 class="anchored" data-anchor-id="what-ill-write-about">What I’ll write about</h2>
+<p>A mix of things:</p>
+<ul>
+<li><strong>Quantitative finance</strong> — yield curves, derivatives pricing, counterparty credit risk</li>
+<li><strong>QuantLib</strong> — practical guides to using QuantLib in Python</li>
+<li><strong>Machine learning in finance</strong> — applying ML to financial problems</li>
+<li><strong>Julia</strong> — numerical computing experiments</li>
+<li><strong>Tools and workflow</strong> — how I set up and run my development environment</li>
+</ul>
+<p>Some posts will be regular markdown. Others will be Jupyter notebooks rendered directly — so you’ll see live code output alongside the writing.</p>
+</section>
+<section id="why-public" class="level2">
+<h2 class="anchored" data-anchor-id="why-public">Why public?</h2>
+<p>Writing forces clarity. And if even one post saves someone three hours of debugging a QuantLib discount curve, it’s worth the effort.</p>
+<p>More soon.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>general</category>
+  <guid>https://christopher-mclaren.github.io/blog/posts/hello-world/</guid>
+  <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://christopher-mclaren.github.io/blog/posts/hello-world/cover.png" medium="image" type="image/png"/>
 </item>
 </channel>
 </rss>

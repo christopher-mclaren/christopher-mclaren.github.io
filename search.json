@@ -1,47 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Christopher McLaren",
-    "section": "",
-    "text": "MBA · MSc · CFA · CAIA · FRM\n\n\nFinancial engineer at PSP Investments, Montreal. I write about quantitative finance, counterparty credit risk, derivatives pricing, and the intersection of machine learning with financial markets. Bilingual (EN/FR).\n\nAbout me GitHub LinkedIn"
-  },
-  {
-    "objectID": "index.html#writing",
-    "href": "index.html#writing",
-    "title": "Christopher McLaren",
-    "section": "Writing",
-    "text": "Writing\n\n\n\n2026-03-14\nGetting Started with QuantLib in Python\n\n\n2026-03-14\nHello World — Why I Started This Blog\n\n\n\nAll posts →"
-  },
-  {
-    "objectID": "blog/posts/hello-world/index.html",
-    "href": "blog/posts/hello-world/index.html",
-    "title": "Hello World — Why I Started This Blog",
-    "section": "",
-    "text": "After years of scribbling notes into private notebooks and Jupyter cells, I decided it was time to write in public."
-  },
-  {
-    "objectID": "blog/posts/hello-world/index.html#who-i-am",
-    "href": "blog/posts/hello-world/index.html#who-i-am",
-    "title": "Hello World — Why I Started This Blog",
-    "section": "Who I am",
-    "text": "Who I am\nI’m a financial engineer at PSP Investments in Montreal. My day-to-day involves quantitative modelling in credit risk and derivatives — building tools that help understand complex financial exposures across a large institutional portfolio.\nOutside the office, I’ve been steadily building skills in machine learning and modern data science, completing certifications in deep learning, TensorFlow, and Python data science. I’ve also started experimenting with Julia, which I’m genuinely excited about for numerical computing."
-  },
-  {
-    "objectID": "blog/posts/hello-world/index.html#what-ill-write-about",
-    "href": "blog/posts/hello-world/index.html#what-ill-write-about",
-    "title": "Hello World — Why I Started This Blog",
-    "section": "What I’ll write about",
-    "text": "What I’ll write about\nA mix of things:\n\nQuantitative finance — yield curves, derivatives pricing, counterparty credit risk\nQuantLib — practical guides to using QuantLib in Python\nMachine learning in finance — applying ML to financial problems\nJulia — numerical computing experiments\nTools and workflow — how I set up and run my development environment\n\nSome posts will be regular markdown. Others will be Jupyter notebooks rendered directly — so you’ll see live code output alongside the writing."
-  },
-  {
-    "objectID": "blog/posts/hello-world/index.html#why-public",
-    "href": "blog/posts/hello-world/index.html#why-public",
-    "title": "Hello World — Why I Started This Blog",
-    "section": "Why public?",
-    "text": "Why public?\nWriting forces clarity. And if even one post saves someone three hours of debugging a QuantLib discount curve, it’s worth the effort.\nMore soon."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -84,13 +42,6 @@
     "text": "Contact\n\nGitHub: christopher-mclaren\nLinkedIn: christopher-mclaren"
   },
   {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Hello World — Why I Started This Blog\n\n1 min\n\n\ngeneral\n\n\n\nAn introduction to who I am and what I’ll be writing about.\n\n\n\nMar 14, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nGetting Started with QuantLib in Python\n\n2 min\n\n\nquantlib\n\npython\n\nrates\n\n\n\nA hands-on introduction to QuantLib — setting up your environment, building a discount curve, and pricing a vanilla swap.\n\n\n\nMar 14, 2026\n\n\n\n\n\n\nNo matching items"
-  },
-  {
     "objectID": "blog/posts/quantlib-intro/index.html",
     "href": "blog/posts/quantlib-intro/index.html",
     "title": "Getting Started with QuantLib in Python",
@@ -124,5 +75,54 @@
     "title": "Getting Started with QuantLib in Python",
     "section": "What’s next",
     "text": "What’s next\nIn the next post I’ll use this curve to price a vanilla interest rate swap — computing the fixed rate that makes the NPV zero at inception.\n\n\n\n\n\n\n\nTip\n\n\n\nThe full notebook version of this post (with live output) will be added shortly."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Christopher McLaren",
+    "section": "",
+    "text": "MBA · MSc · CFA · CAIA · FRM\n\n\nFinancial engineer at PSP Investments, Montreal. I write about quantitative finance, counterparty credit risk, derivatives pricing, and the intersection of machine learning with financial markets. Bilingual (EN/FR).\n\nAbout me GitHub LinkedIn"
+  },
+  {
+    "objectID": "index.html#writing",
+    "href": "index.html#writing",
+    "title": "Christopher McLaren",
+    "section": "Writing",
+    "text": "Writing\n\n\n\n2026-03-14\nGetting Started with QuantLib in Python\n\n\n2026-03-14\nHello World — Why I Started This Blog\n\n\n\nAll posts →"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Getting Started with QuantLib in Python\n\n2 min\n\n\nquantlib\n\npython\n\nrates\n\n\n\nA hands-on introduction to QuantLib — setting up your environment, building a discount curve, and pricing a vanilla swap.\n\n\n\nMar 14, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nHello World — Why I Started This Blog\n\n1 min\n\n\ngeneral\n\n\n\nAn introduction to who I am and what I’ll be writing about.\n\n\n\nMar 14, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/posts/hello-world/index.html",
+    "href": "blog/posts/hello-world/index.html",
+    "title": "Hello World — Why I Started This Blog",
+    "section": "",
+    "text": "After years of scribbling notes into private notebooks and Jupyter cells, I decided it was time to write in public."
+  },
+  {
+    "objectID": "blog/posts/hello-world/index.html#who-i-am",
+    "href": "blog/posts/hello-world/index.html#who-i-am",
+    "title": "Hello World — Why I Started This Blog",
+    "section": "Who I am",
+    "text": "Who I am\nI’m a financial engineer at PSP Investments in Montreal. My day-to-day involves quantitative modelling in credit risk and derivatives — building tools that help understand complex financial exposures across a large institutional portfolio.\nOutside the office, I’ve been steadily building skills in machine learning and modern data science, completing certifications in deep learning, TensorFlow, and Python data science. I’ve also started experimenting with Julia, which I’m genuinely excited about for numerical computing."
+  },
+  {
+    "objectID": "blog/posts/hello-world/index.html#what-ill-write-about",
+    "href": "blog/posts/hello-world/index.html#what-ill-write-about",
+    "title": "Hello World — Why I Started This Blog",
+    "section": "What I’ll write about",
+    "text": "What I’ll write about\nA mix of things:\n\nQuantitative finance — yield curves, derivatives pricing, counterparty credit risk\nQuantLib — practical guides to using QuantLib in Python\nMachine learning in finance — applying ML to financial problems\nJulia — numerical computing experiments\nTools and workflow — how I set up and run my development environment\n\nSome posts will be regular markdown. Others will be Jupyter notebooks rendered directly — so you’ll see live code output alongside the writing."
+  },
+  {
+    "objectID": "blog/posts/hello-world/index.html#why-public",
+    "href": "blog/posts/hello-world/index.html#why-public",
+    "title": "Hello World — Why I Started This Blog",
+    "section": "Why public?",
+    "text": "Why public?\nWriting forces clarity. And if even one post saves someone three hours of debugging a QuantLib discount curve, it’s worth the effort.\nMore soon."
   }
 ]

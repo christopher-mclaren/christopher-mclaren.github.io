@@ -2,8 +2,8 @@
   {
     "listing": "/blog/index.html",
     "items": [
-      "/blog/posts/hello-world/index.html",
-      "/blog/posts/quantlib-intro/index.html"
+      "/blog/posts/quantlib-intro/index.html",
+      "/blog/posts/hello-world/index.html"
     ]
   }
 ]
