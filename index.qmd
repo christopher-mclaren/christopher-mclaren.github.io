@@ -12,9 +12,9 @@ MBA · MSc · CFA · CAIA · FRM
 :::
 
 ::: {.tagline}
-Financial engineer at PSP Investments, Montreal. I write about quantitative finance,
-counterparty credit risk, derivatives pricing, and the intersection of machine learning
-with financial markets. Bilingual (EN/FR).
+Financial engineer at PSP Investments, Montreal. I write about AI × Financial Engineering × Capital Markets 
+— where quantitative rigor meets strategic innovation, regulatory strategy, philosophical meanderings, and technical leadership
+Bilingual (EN/FR).
 :::
 
 [About me](about.qmd){.btn .btn-outline-secondary .btn-sm style="margin-top:1rem; margin-right:0.5rem;"}
