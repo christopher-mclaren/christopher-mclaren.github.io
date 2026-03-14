@@ -1,0 +1,141 @@
+/* ============================================================
+   Christopher McLaren — custom styles
+   Dark mode: darkly base + overrides for hamel.dev aesthetic
+   ============================================================ */
+
+/* --- Typography ------------------------------------------- */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 1.0rem;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+code, pre {
+  font-family: ui-monospace, "SFMono-Regular", "Cascadia Code", Consolas, monospace;
+  font-size: 0.88em;
+}
+
+/* --- Navbar ----------------------------------------------- */
+.navbar {
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 0.6rem 1rem;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: -0.02em;
+}
+
+/* --- Homepage hero ---------------------------------------- */
+.hero {
+  padding: 3rem 0 2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 2.5rem;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.hero .credentials {
+  font-size: 0.85rem;
+  opacity: 0.6;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.hero .tagline {
+  font-size: 1.05rem;
+  opacity: 0.85;
+  max-width: 540px;
+  line-height: 1.6;
+}
+
+/* --- Blog listing table (hamel.dev style) ----------------- */
+.blog-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.blog-table td {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  vertical-align: top;
+}
+
+.blog-table .date {
+  white-space: nowrap;
+  opacity: 0.5;
+  font-size: 0.85rem;
+  width: 100px;
+  padding-right: 1.5rem;
+}
+
+.blog-table a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.blog-table a:hover {
+  text-decoration: underline;
+}
+
+/* --- Blog cards (randomrealizations style) ---------------- */
+.quarto-post .thumbnail img {
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.listing-category {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+/* --- Post content ----------------------------------------- */
+.quarto-title {
+  margin-bottom: 0.5rem;
+}
+
+.quarto-title-meta {
+  opacity: 0.6;
+  font-size: 0.85rem;
+}
+
+/* Callout boxes */
+.callout {
+  border-radius: 6px;
+  border-left-width: 4px;
+}
+
+/* Code blocks */
+div.sourceCode {
+  border-radius: 6px;
+  font-size: 0.87em;
+}
+
+/* --- Footer ----------------------------------------------- */
+.nav-footer {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 1rem 0;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* --- Responsive ------------------------------------------- */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 1.6rem; }
+  .hero { padding: 2rem 0 1.5rem 0; }
+}
