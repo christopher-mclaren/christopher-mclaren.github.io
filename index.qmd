@@ -12,8 +12,9 @@ MBA · MSc · CFA · CAIA · FRM
 :::
 
 ::: {.tagline}
-Senior Director Risk Analytics and Model Management at PSP Investments, Montreal. I write about AI × Financial Engineering × Capital Markets 
-— where quantitative rigor meets strategic innovation, regulatory strategy, philosophical meanderings, and technical leadership
+Senior Director Risk Analytics and Model Management at PSP Investments, Montreal. 
+I write about AI × Financial Engineering × Capital Markets 
+— where quantitative rigor meets strategic innovation, regulatory strategy, philosophical meanderings, and technical leadership.
 Bilingual (EN/FR).
 :::
 
