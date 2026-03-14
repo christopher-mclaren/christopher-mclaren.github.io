@@ -11,11 +11,9 @@ one of Canada's largest Crown corporation pension investment managers.
 My work sits at the intersection of quantitative finance, counterparty credit risk, and
 derivatives — building models and tools that help understand and manage complex financial exposures.
 
-Over the past several years I've developed a strong interest in applying machine learning
-and data science to financial problems, which led me to earn several ML certifications
-and experiment with tools like Python, Julia, and QuantLib.
+I work at the intersection of AI, financial engineering, and regulatory strategy in capital markets — helping organizations navigate complexity and build the quantitative tools and teams that define the next generation of finance
 
-This site is where I share what I'm learning and building.
+This site is where I share what I'm learning.
 
 ---
 
@@ -23,8 +21,8 @@ This site is where I share what I'm learning and building.
 
 | Credential | Institution |
 |:--|:--|
-| MBA | McGill University |
-| MSc | |
+| MBA | HEC University |
+| MSc | HEC Financial Engineering |
 | CFA — Chartered Financial Analyst | CFA Institute |
 | CAIA — Chartered Alternative Investment Analyst | CAIA Association |
 | FRM — Financial Risk Manager | GARP |
