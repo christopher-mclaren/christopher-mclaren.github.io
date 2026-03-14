@@ -32,32 +32,101 @@ code, pre {
   letter-spacing: -0.02em;
 }
 
-/* --- Homepage hero ---------------------------------------- */
-.hero {
-  padding: 3rem 0 2rem 0;
+/* --- Banner ----------------------------------------------- */
+.site-banner-wrap {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  max-height: 260px;
+  margin-bottom: 0;
+}
+
+.site-banner {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+
+/* --- Hero flex (photo + bio) ------------------------------ */
+.hero-flex {
+  display: flex;
+  gap: 2.2rem;
+  align-items: flex-start;
+  padding: 2.2rem 0 2rem 0;
   border-bottom: 1px solid rgba(255,255,255,0.08);
   margin-bottom: 2.5rem;
 }
 
-.hero h1 {
-  font-size: 2rem;
+.hero-photo-wrap {
+  flex-shrink: 0;
+}
+
+.headshot {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid rgba(255,255,255,0.12);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.hero-bio {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-name {
+  font-size: 1.9rem;
   font-weight: 700;
-  margin-bottom: 0.4rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.3rem;
+  letter-spacing: -0.02em;
 }
 
-.hero .credentials {
-  font-size: 0.85rem;
-  opacity: 0.6;
-  letter-spacing: 0.04em;
+.credentials {
+  font-size: 0.78rem;
+  opacity: 0.55;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0.9rem;
 }
 
-.hero .tagline {
-  font-size: 1.05rem;
+.tagline {
+  font-size: 1rem;
   opacity: 0.85;
-  max-width: 540px;
-  line-height: 1.6;
+  max-width: 560px;
+  line-height: 1.65;
+  margin-bottom: 1.2rem;
+}
+
+.hero-links {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border: 1px solid rgba(255,255,255,0.25);
+  border-radius: 4px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  opacity: 0.85;
+  transition: opacity 0.15s, border-color 0.15s;
+}
+
+.hero-btn:hover {
+  opacity: 1;
+  border-color: rgba(255,255,255,0.5);
+  text-decoration: none;
 }
 
 /* --- Blog listing table (hamel.dev style) ----------------- */
@@ -135,7 +204,9 @@ div.sourceCode {
 }
 
 /* --- Responsive ------------------------------------------- */
-@media (max-width: 768px) {
-  .hero h1 { font-size: 1.6rem; }
-  .hero { padding: 2rem 0 1.5rem 0; }
+@media (max-width: 640px) {
+  .hero-flex { flex-direction: column; gap: 1.2rem; }
+  .headshot { width: 110px; height: 110px; }
+  .hero-name { font-size: 1.5rem; }
+  .site-banner { height: 160px; }
 }
