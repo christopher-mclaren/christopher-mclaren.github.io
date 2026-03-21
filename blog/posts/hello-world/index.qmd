@@ -1,5 +1,5 @@
 ---
-title: "Test Title"
+title: "Test Title - Quarto Test2"
 description: "Test description — this post demonstrates blog formatting only."
 date: 2026-03-21
 categories: [test]
