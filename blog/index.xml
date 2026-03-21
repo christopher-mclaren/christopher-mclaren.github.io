@@ -9,205 +9,10 @@
 <link>https://christopher-mclaren.github.io/blog/</link>
 <atom:link href="https://christopher-mclaren.github.io/blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Financial engineer at PSP Investments. Writing about quantitative finance, risk, and machine learning.</description>
-<generator>quarto-1.8.27</generator>
-<lastBuildDate>Sat, 14 Mar 2026 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.9.36</generator>
+<lastBuildDate>Sat, 21 Mar 2026 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>Getting Started with QuantLib in Python</title>
-  <link>https://christopher-mclaren.github.io/blog/posts/quantlib-intro/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p><a href="https://www.quantlib.org/">QuantLib</a> is the most comprehensive open-source library for quantitative finance. It handles everything from date arithmetic to full term structure models and derivatives pricing. This post walks through the basics.</p>
-<section id="setup" class="level2">
-<h2 class="anchored" data-anchor-id="setup">Setup</h2>
-<p>If you’re using the <code>fineng</code> conda environment:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="ex" style="color: null;
-background-color: null;
-font-style: inherit;">conda</span> install <span class="at" style="color: #657422;
-background-color: null;
-font-style: inherit;">-c</span> conda-forge quantlib-python</span></code></pre></div></div>
-<p>Then import:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">import</span> QuantLib <span class="im" style="color: #00769E;
-background-color: null;
-font-style: inherit;">as</span> ql</span>
-<span id="cb2-2"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(ql.__version__)</span></code></pre></div></div>
-</section>
-<section id="setting-the-evaluation-date" class="level2">
-<h2 class="anchored" data-anchor-id="setting-the-evaluation-date">Setting the evaluation date</h2>
-<p>QuantLib has a global evaluation date that anchors all calculations:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">today <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> ql.Date(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">14</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2026</span>)</span>
-<span id="cb3-2">ql.Settings.instance().evaluationDate <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> today</span>
-<span id="cb3-3"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">f"Evaluation date: </span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>today<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>)</span></code></pre></div></div>
-</section>
-<section id="building-a-discount-curve" class="level2">
-<h2 class="anchored" data-anchor-id="building-a-discount-curve">Building a discount curve</h2>
-<p>A discount curve maps each future date to a discount factor <img src="https://latex.codecogs.com/png.latex?P(0,%20T)">, which represents the present value of 1 unit of currency received at time <img src="https://latex.codecogs.com/png.latex?T">.</p>
-<p><img src="https://latex.codecogs.com/png.latex?P(0,%20T)%20=%20e%5E%7B-r(T)%20%5Ccdot%20T%7D"></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1">dates <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [</span>
-<span id="cb4-2">    today,</span>
-<span id="cb4-3">    today <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> ql.Period(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">6</span>, ql.Months),</span>
-<span id="cb4-4">    today <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> ql.Period(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, ql.Years),</span>
-<span id="cb4-5">    today <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> ql.Period(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">2</span>, ql.Years),</span>
-<span id="cb4-6">    today <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> ql.Period(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span>, ql.Years),</span>
-<span id="cb4-7">    today <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> ql.Period(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10</span>, ql.Years),</span>
-<span id="cb4-8">]</span>
-<span id="cb4-9"></span>
-<span id="cb4-10">discounts <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> [<span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1.0</span>, <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.978</span>, <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.955</span>, <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.910</span>, <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.820</span>, <span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">0.680</span>]</span>
-<span id="cb4-11"></span>
-<span id="cb4-12">curve <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">=</span> ql.DiscountCurve(dates, discounts, ql.Actual360())</span>
-<span id="cb4-13">curve.enableExtrapolation()</span>
-<span id="cb4-14"></span>
-<span id="cb4-15"><span class="co" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;"># Query the curve</span></span>
-<span id="cb4-16"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">f"1Y discount  : </span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>curve<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span>discount(today <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> ql.Period(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">1</span>, ql.Years))<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:.4f}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>)</span>
-<span id="cb4-17"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">f"5Y discount  : </span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>curve<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span>discount(today <span class="op" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">+</span> ql.Period(<span class="dv" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">5</span>, ql.Years))<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:.4f}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>)</span>
-<span id="cb4-18"><span class="bu" style="color: null;
-background-color: null;
-font-style: inherit;">print</span>(<span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">f"10Y zero rate: </span><span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">{</span>curve<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span>zeroRate(<span class="fl" style="color: #AD0000;
-background-color: null;
-font-style: inherit;">10.0</span>, ql.Continuous)<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">.</span>rate()<span class="sc" style="color: #5E5E5E;
-background-color: null;
-font-style: inherit;">:.4%}</span><span class="ss" style="color: #20794D;
-background-color: null;
-font-style: inherit;">"</span>)</span></code></pre></div></div>
-</section>
-<section id="whats-next" class="level2">
-<h2 class="anchored" data-anchor-id="whats-next">What’s next</h2>
-<p>In the next post I’ll use this curve to price a vanilla interest rate swap — computing the fixed rate that makes the NPV zero at inception.</p>
-<hr>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Tip
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The full notebook version of this post (with live output) will be added shortly.</p>
-</div>
-</div>
-
-
-</section>
-
- ]]></description>
-  <category>quantlib</category>
-  <category>python</category>
-  <category>rates</category>
-  <guid>https://christopher-mclaren.github.io/blog/posts/quantlib-intro/</guid>
-  <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://christopher-mclaren.github.io/blog/posts/quantlib-intro/cover.png" medium="image" type="image/png"/>
-</item>
-<item>
-  <title>Hello World — Why I Started This Blog</title>
+  <title>Test Title</title>
   <link>https://christopher-mclaren.github.io/blog/posts/hello-world/</link>
   <description><![CDATA[ 
 
@@ -215,37 +20,88 @@ Tip
 
 
 
-<p>After years of scribbling notes into private notebooks and Jupyter cells, I decided it was time to write in public.</p>
-<section id="who-i-am" class="level2">
-<h2 class="anchored" data-anchor-id="who-i-am">Who I am</h2>
-<p>I’m a financial engineer at PSP Investments in Montreal. My day-to-day involves quantitative modelling in credit risk and derivatives — building tools that help understand complex financial exposures across a large institutional portfolio.</p>
-<p>Outside the office, I’ve been steadily building skills in machine learning and modern data science, completing certifications in deep learning, TensorFlow, and Python data science. I’ve also started experimenting with Julia, which I’m genuinely excited about for numerical computing.</p>
+<p>Test body text. This is a placeholder post used to verify that the blog renders correctly. It demonstrates the available formatting elements for future posts.</p>
+<section id="test-header" class="level2">
+<h2 class="anchored" data-anchor-id="test-header">Test Header</h2>
+<p>Test body text under a main section header. Lorem ipsum placeholder content to show paragraph spacing and typography.</p>
+<section id="test-subheader" class="level3">
+<h3 class="anchored" data-anchor-id="test-subheader">Test Subheader</h3>
+<p>Test body text under a subsection header. This shows the three-level heading hierarchy available in posts.</p>
 </section>
-<section id="what-ill-write-about" class="level2">
-<h2 class="anchored" data-anchor-id="what-ill-write-about">What I’ll write about</h2>
-<p>A mix of things:</p>
+</section>
+<section id="text-formatting" class="level2">
+<h2 class="anchored" data-anchor-id="text-formatting">Text Formatting</h2>
+<p>Test body text with <strong>bold text</strong>, <em>italic text</em>, and <code>inline code</code>.</p>
+</section>
+<section id="test-list" class="level2">
+<h2 class="anchored" data-anchor-id="test-list">Test List</h2>
 <ul>
-<li><strong>Quantitative finance</strong> — yield curves, derivatives pricing, counterparty credit risk</li>
-<li><strong>QuantLib</strong> — practical guides to using QuantLib in Python</li>
-<li><strong>Machine learning in finance</strong> — applying ML to financial problems</li>
-<li><strong>Julia</strong> — numerical computing experiments</li>
-<li><strong>Tools and workflow</strong> — how I set up and run my development environment</li>
+<li>Test list item one</li>
+<li>Test list item two</li>
+<li>Test list item three</li>
 </ul>
-<p>Some posts will be regular markdown. Others will be Jupyter notebooks rendered directly — so you’ll see live code output alongside the writing.</p>
 </section>
-<section id="why-public" class="level2">
-<h2 class="anchored" data-anchor-id="why-public">Why public?</h2>
-<p>Writing forces clarity. And if even one post saves someone three hours of debugging a QuantLib discount curve, it’s worth the effort.</p>
-<p>More soon.</p>
+<section id="test-numbered-list" class="level2">
+<h2 class="anchored" data-anchor-id="test-numbered-list">Test Numbered List</h2>
+<ol type="1">
+<li>Test numbered item one</li>
+<li>Test numbered item two</li>
+<li>Test numbered item three</li>
+</ol>
+</section>
+<section id="test-code-block" class="level2">
+<h2 class="anchored" data-anchor-id="test-code-block">Test Code Block</h2>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Test code block</span></span>
+<span id="cb1-2"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">def</span> test_function():</span>
+<span id="cb1-3">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">return</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"test body text"</span></span></code></pre></div></div>
+</section>
+<section id="test-blockquote" class="level2">
+<h2 class="anchored" data-anchor-id="test-blockquote">Test Blockquote</h2>
+<blockquote class="blockquote">
+<p>Test blockquote body text. This is how a pull quote or reference would appear.</p>
+</blockquote>
+</section>
+<section id="test-table" class="level2">
+<h2 class="anchored" data-anchor-id="test-table">Test Table</h2>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Test Column A</th>
+<th>Test Column B</th>
+<th>Test Column C</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Test cell</td>
+<td>Test cell</td>
+<td>Test cell</td>
+</tr>
+<tr class="even">
+<td>Test cell</td>
+<td>Test cell</td>
+<td>Test cell</td>
+</tr>
+</tbody>
+</table>
 
 
 </section>
 
  ]]></description>
-  <category>general</category>
+  <category>test</category>
   <guid>https://christopher-mclaren.github.io/blog/posts/hello-world/</guid>
-  <pubDate>Sat, 14 Mar 2026 00:00:00 GMT</pubDate>
-  <media:content url="https://christopher-mclaren.github.io/blog/posts/hello-world/cover.png" medium="image" type="image/png"/>
+  <pubDate>Sat, 21 Mar 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>

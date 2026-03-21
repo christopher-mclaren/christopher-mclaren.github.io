@@ -2,7 +2,6 @@
   {
     "listing": "/blog/index.html",
     "items": [
-      "/blog/posts/quantlib-intro/index.html",
       "/blog/posts/hello-world/index.html"
     ]
   }

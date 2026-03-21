@@ -42,80 +42,73 @@
     "text": "Contact\n\nGitHub: christopher-mclaren\nLinkedIn: christopher-mclaren"
   },
   {
-    "objectID": "blog/posts/quantlib-intro/index.html",
-    "href": "blog/posts/quantlib-intro/index.html",
-    "title": "Getting Started with QuantLib in Python",
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
     "section": "",
-    "text": "QuantLib is the most comprehensive open-source library for quantitative finance. It handles everything from date arithmetic to full term structure models and derivatives pricing. This post walks through the basics."
-  },
-  {
-    "objectID": "blog/posts/quantlib-intro/index.html#setup",
-    "href": "blog/posts/quantlib-intro/index.html#setup",
-    "title": "Getting Started with QuantLib in Python",
-    "section": "Setup",
-    "text": "Setup\nIf you’re using the fineng conda environment:\nconda install -c conda-forge quantlib-python\nThen import:\nimport QuantLib as ql\nprint(ql.__version__)"
-  },
-  {
-    "objectID": "blog/posts/quantlib-intro/index.html#setting-the-evaluation-date",
-    "href": "blog/posts/quantlib-intro/index.html#setting-the-evaluation-date",
-    "title": "Getting Started with QuantLib in Python",
-    "section": "Setting the evaluation date",
-    "text": "Setting the evaluation date\nQuantLib has a global evaluation date that anchors all calculations:\ntoday = ql.Date(14, 3, 2026)\nql.Settings.instance().evaluationDate = today\nprint(f\"Evaluation date: {today}\")"
-  },
-  {
-    "objectID": "blog/posts/quantlib-intro/index.html#building-a-discount-curve",
-    "href": "blog/posts/quantlib-intro/index.html#building-a-discount-curve",
-    "title": "Getting Started with QuantLib in Python",
-    "section": "Building a discount curve",
-    "text": "Building a discount curve\nA discount curve maps each future date to a discount factor \\(P(0, T)\\), which represents the present value of 1 unit of currency received at time \\(T\\).\n\\[P(0, T) = e^{-r(T) \\cdot T}\\]\ndates = [\n    today,\n    today + ql.Period(6, ql.Months),\n    today + ql.Period(1, ql.Years),\n    today + ql.Period(2, ql.Years),\n    today + ql.Period(5, ql.Years),\n    today + ql.Period(10, ql.Years),\n]\n\ndiscounts = [1.0, 0.978, 0.955, 0.910, 0.820, 0.680]\n\ncurve = ql.DiscountCurve(dates, discounts, ql.Actual360())\ncurve.enableExtrapolation()\n\n# Query the curve\nprint(f\"1Y discount  : {curve.discount(today + ql.Period(1, ql.Years)):.4f}\")\nprint(f\"5Y discount  : {curve.discount(today + ql.Period(5, ql.Years)):.4f}\")\nprint(f\"10Y zero rate: {curve.zeroRate(10.0, ql.Continuous).rate():.4%}\")"
-  },
-  {
-    "objectID": "blog/posts/quantlib-intro/index.html#whats-next",
-    "href": "blog/posts/quantlib-intro/index.html#whats-next",
-    "title": "Getting Started with QuantLib in Python",
-    "section": "What’s next",
-    "text": "What’s next\nIn the next post I’ll use this curve to price a vanilla interest rate swap — computing the fixed rate that makes the NPV zero at inception.\n\n\n\n\n\n\n\nTip\n\n\n\nThe full notebook version of this post (with live output) will be added shortly."
+    "text": "Test Title\n\n1 min\n\n\ntest\n\n\n\nTest description — this post demonstrates blog formatting only.\n\n\n\nMar 21, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#writing",
     "href": "index.html#writing",
     "title": "Christopher McLaren",
     "section": "Writing",
-    "text": "Writing\n\n\n\n2026-03-14\nGetting Started with QuantLib in Python\n\n\n2026-03-14\nHello World — Why I Started This Blog\n\n\n\nAll posts →"
-  },
-  {
-    "objectID": "blog/index.html",
-    "href": "blog/index.html",
-    "title": "Blog",
-    "section": "",
-    "text": "Getting Started with QuantLib in Python\n\n2 min\n\n\nquantlib\n\npython\n\nrates\n\n\n\nA hands-on introduction to QuantLib — setting up your environment, building a discount curve, and pricing a vanilla swap.\n\n\n\nMar 14, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nHello World — Why I Started This Blog\n\n1 min\n\n\ngeneral\n\n\n\nAn introduction to who I am and what I’ll be writing about.\n\n\n\nMar 14, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Writing\n\n\n\n2026-03-21\nTest Title\n\n\n\nAll posts →"
   },
   {
     "objectID": "blog/posts/hello-world/index.html",
     "href": "blog/posts/hello-world/index.html",
-    "title": "Hello World — Why I Started This Blog",
+    "title": "Test Title",
     "section": "",
-    "text": "After years of scribbling notes into private notebooks and Jupyter cells, I decided it was time to write in public."
+    "text": "Test body text. This is a placeholder post used to verify that the blog renders correctly. It demonstrates the available formatting elements for future posts."
   },
   {
-    "objectID": "blog/posts/hello-world/index.html#who-i-am",
-    "href": "blog/posts/hello-world/index.html#who-i-am",
-    "title": "Hello World — Why I Started This Blog",
-    "section": "Who I am",
-    "text": "Who I am\nI’m a financial engineer at PSP Investments in Montreal. My day-to-day involves quantitative modelling in credit risk and derivatives — building tools that help understand complex financial exposures across a large institutional portfolio.\nOutside the office, I’ve been steadily building skills in machine learning and modern data science, completing certifications in deep learning, TensorFlow, and Python data science. I’ve also started experimenting with Julia, which I’m genuinely excited about for numerical computing."
+    "objectID": "blog/posts/hello-world/index.html#test-header",
+    "href": "blog/posts/hello-world/index.html#test-header",
+    "title": "Test Title",
+    "section": "Test Header",
+    "text": "Test Header\nTest body text under a main section header. Lorem ipsum placeholder content to show paragraph spacing and typography.\n\nTest Subheader\nTest body text under a subsection header. This shows the three-level heading hierarchy available in posts."
   },
   {
-    "objectID": "blog/posts/hello-world/index.html#what-ill-write-about",
-    "href": "blog/posts/hello-world/index.html#what-ill-write-about",
-    "title": "Hello World — Why I Started This Blog",
-    "section": "What I’ll write about",
-    "text": "What I’ll write about\nA mix of things:\n\nQuantitative finance — yield curves, derivatives pricing, counterparty credit risk\nQuantLib — practical guides to using QuantLib in Python\nMachine learning in finance — applying ML to financial problems\nJulia — numerical computing experiments\nTools and workflow — how I set up and run my development environment\n\nSome posts will be regular markdown. Others will be Jupyter notebooks rendered directly — so you’ll see live code output alongside the writing."
+    "objectID": "blog/posts/hello-world/index.html#text-formatting",
+    "href": "blog/posts/hello-world/index.html#text-formatting",
+    "title": "Test Title",
+    "section": "Text Formatting",
+    "text": "Text Formatting\nTest body text with bold text, italic text, and inline code."
   },
   {
-    "objectID": "blog/posts/hello-world/index.html#why-public",
-    "href": "blog/posts/hello-world/index.html#why-public",
-    "title": "Hello World — Why I Started This Blog",
-    "section": "Why public?",
-    "text": "Why public?\nWriting forces clarity. And if even one post saves someone three hours of debugging a QuantLib discount curve, it’s worth the effort.\nMore soon."
+    "objectID": "blog/posts/hello-world/index.html#test-list",
+    "href": "blog/posts/hello-world/index.html#test-list",
+    "title": "Test Title",
+    "section": "Test List",
+    "text": "Test List\n\nTest list item one\nTest list item two\nTest list item three"
+  },
+  {
+    "objectID": "blog/posts/hello-world/index.html#test-numbered-list",
+    "href": "blog/posts/hello-world/index.html#test-numbered-list",
+    "title": "Test Title",
+    "section": "Test Numbered List",
+    "text": "Test Numbered List\n\nTest numbered item one\nTest numbered item two\nTest numbered item three"
+  },
+  {
+    "objectID": "blog/posts/hello-world/index.html#test-code-block",
+    "href": "blog/posts/hello-world/index.html#test-code-block",
+    "title": "Test Title",
+    "section": "Test Code Block",
+    "text": "Test Code Block\n# Test code block\ndef test_function():\n    return \"test body text\""
+  },
+  {
+    "objectID": "blog/posts/hello-world/index.html#test-blockquote",
+    "href": "blog/posts/hello-world/index.html#test-blockquote",
+    "title": "Test Title",
+    "section": "Test Blockquote",
+    "text": "Test Blockquote\n\nTest blockquote body text. This is how a pull quote or reference would appear."
+  },
+  {
+    "objectID": "blog/posts/hello-world/index.html#test-table",
+    "href": "blog/posts/hello-world/index.html#test-table",
+    "title": "Test Title",
+    "section": "Test Table",
+    "text": "Test Table\n\n\n\nTest Column A\nTest Column B\nTest Column C\n\n\n\n\nTest cell\nTest cell\nTest cell\n\n\nTest cell\nTest cell\nTest cell"
   }
 ]

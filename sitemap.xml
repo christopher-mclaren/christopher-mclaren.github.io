@@ -2,22 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://christopher-mclaren.github.io/about.html</loc>
-    <lastmod>2026-03-14T18:01:58.868Z</lastmod>
-  </url>
-  <url>
-    <loc>https://christopher-mclaren.github.io/blog/posts/quantlib-intro/index.html</loc>
-    <lastmod>2026-03-14T18:01:58.892Z</lastmod>
-  </url>
-  <url>
-    <loc>https://christopher-mclaren.github.io/index.html</loc>
-    <lastmod>2026-03-14T18:01:58.892Z</lastmod>
+    <lastmod>2026-03-21T12:34:42.795Z</lastmod>
   </url>
   <url>
     <loc>https://christopher-mclaren.github.io/blog/index.html</loc>
-    <lastmod>2026-03-14T18:01:58.891Z</lastmod>
+    <lastmod>2026-03-21T12:34:42.817Z</lastmod>
+  </url>
+  <url>
+    <loc>https://christopher-mclaren.github.io/index.html</loc>
+    <lastmod>2026-03-21T12:34:42.818Z</lastmod>
   </url>
   <url>
     <loc>https://christopher-mclaren.github.io/blog/posts/hello-world/index.html</loc>
-    <lastmod>2026-03-14T18:01:58.892Z</lastmod>
+    <lastmod>2026-03-21T12:34:42.818Z</lastmod>
   </url>
 </urlset>
