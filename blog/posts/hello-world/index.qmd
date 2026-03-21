@@ -1,41 +1,51 @@
 ---
-title: "Hello World — Why I Started This Blog"
-description: "An introduction to who I am and what I'll be writing about."
-date: 2026-03-14
-categories: [general]
-image: cover.png
+title: "Test Title"
+description: "Test description — this post demonstrates blog formatting only."
+date: 2026-03-21
+categories: [test]
 ---
 
-After years of scribbling notes into private notebooks and Jupyter cells, I decided it was
-time to write in public.
+Test body text. This is a placeholder post used to verify that the blog renders correctly. It demonstrates the available formatting elements for future posts.
 
-## Who I am
+## Test Header
 
-I'm a financial engineer at PSP Investments in Montreal. My day-to-day involves quantitative
-modelling in credit risk and derivatives — building tools that help understand complex financial
-exposures across a large institutional portfolio.
+Test body text under a main section header. Lorem ipsum placeholder content to show paragraph spacing and typography.
 
-Outside the office, I've been steadily building skills in machine learning and modern data
-science, completing certifications in deep learning, TensorFlow, and Python data science.
-I've also started experimenting with Julia, which I'm genuinely excited about for
-numerical computing.
+### Test Subheader
 
-## What I'll write about
+Test body text under a subsection header. This shows the three-level heading hierarchy available in posts.
 
-A mix of things:
+## Text Formatting
 
-- **Quantitative finance** — yield curves, derivatives pricing, counterparty credit risk
-- **QuantLib** — practical guides to using QuantLib in Python
-- **Machine learning in finance** — applying ML to financial problems
-- **Julia** — numerical computing experiments
-- **Tools and workflow** — how I set up and run my development environment
+Test body text with **bold text**, *italic text*, and `inline code`.
 
-Some posts will be regular markdown. Others will be Jupyter notebooks rendered directly —
-so you'll see live code output alongside the writing.
+## Test List
 
-## Why public?
+- Test list item one
+- Test list item two
+- Test list item three
 
-Writing forces clarity. And if even one post saves someone three hours of debugging a
-QuantLib discount curve, it's worth the effort.
+## Test Numbered List
 
-More soon.
+1. Test numbered item one
+2. Test numbered item two
+3. Test numbered item three
+
+## Test Code Block
+
+```python
+# Test code block
+def test_function():
+    return "test body text"
+```
+
+## Test Blockquote
+
+> Test blockquote body text. This is how a pull quote or reference would appear.
+
+## Test Table
+
+| Test Column A | Test Column B | Test Column C |
+|---------------|---------------|---------------|
+| Test cell     | Test cell     | Test cell     |
+| Test cell     | Test cell     | Test cell     |
