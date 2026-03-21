@@ -46,7 +46,7 @@
     "href": "blog/index.html",
     "title": "Blog",
     "section": "",
-    "text": "Test Title\n\n1 min\n\n\ntest\n\n\n\nTest description — this post demonstrates blog formatting only.\n\n\n\nMar 21, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Test Title - Quarto Test2\n\n1 min\n\n\ntest\n\n\n\nTest description — this post demonstrates blog formatting only.\n\n\n\nMar 21, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#writing",
@@ -58,56 +58,56 @@
   {
     "objectID": "blog/posts/hello-world/index.html",
     "href": "blog/posts/hello-world/index.html",
-    "title": "Test Title",
+    "title": "Test Title - Quarto Test2",
     "section": "",
     "text": "Test body text. This is a placeholder post used to verify that the blog renders correctly. It demonstrates the available formatting elements for future posts."
   },
   {
     "objectID": "blog/posts/hello-world/index.html#test-header",
     "href": "blog/posts/hello-world/index.html#test-header",
-    "title": "Test Title",
+    "title": "Test Title - Quarto Test2",
     "section": "Test Header",
     "text": "Test Header\nTest body text under a main section header. Lorem ipsum placeholder content to show paragraph spacing and typography.\n\nTest Subheader\nTest body text under a subsection header. This shows the three-level heading hierarchy available in posts."
   },
   {
     "objectID": "blog/posts/hello-world/index.html#text-formatting",
     "href": "blog/posts/hello-world/index.html#text-formatting",
-    "title": "Test Title",
+    "title": "Test Title - Quarto Test2",
     "section": "Text Formatting",
     "text": "Text Formatting\nTest body text with bold text, italic text, and inline code."
   },
   {
     "objectID": "blog/posts/hello-world/index.html#test-list",
     "href": "blog/posts/hello-world/index.html#test-list",
-    "title": "Test Title",
+    "title": "Test Title - Quarto Test2",
     "section": "Test List",
     "text": "Test List\n\nTest list item one\nTest list item two\nTest list item three"
   },
   {
     "objectID": "blog/posts/hello-world/index.html#test-numbered-list",
     "href": "blog/posts/hello-world/index.html#test-numbered-list",
-    "title": "Test Title",
+    "title": "Test Title - Quarto Test2",
     "section": "Test Numbered List",
     "text": "Test Numbered List\n\nTest numbered item one\nTest numbered item two\nTest numbered item three"
   },
   {
     "objectID": "blog/posts/hello-world/index.html#test-code-block",
     "href": "blog/posts/hello-world/index.html#test-code-block",
-    "title": "Test Title",
+    "title": "Test Title - Quarto Test2",
     "section": "Test Code Block",
     "text": "Test Code Block\n# Test code block\ndef test_function():\n    return \"test body text\""
   },
   {
     "objectID": "blog/posts/hello-world/index.html#test-blockquote",
     "href": "blog/posts/hello-world/index.html#test-blockquote",
-    "title": "Test Title",
+    "title": "Test Title - Quarto Test2",
     "section": "Test Blockquote",
     "text": "Test Blockquote\n\nTest blockquote body text. This is how a pull quote or reference would appear."
   },
   {
     "objectID": "blog/posts/hello-world/index.html#test-table",
     "href": "blog/posts/hello-world/index.html#test-table",
-    "title": "Test Title",
+    "title": "Test Title - Quarto Test2",
     "section": "Test Table",
     "text": "Test Table\n\n\n\nTest Column A\nTest Column B\nTest Column C\n\n\n\n\nTest cell\nTest cell\nTest cell\n\n\nTest cell\nTest cell\nTest cell"
   }
